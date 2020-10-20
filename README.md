@@ -1,25 +1,16 @@
-# README
+<h1>Teste Nama</h1>
+<h2>Pré-requisito</h2>
+<ul>
+  <li>Rails 5.2.4+</li>
+  <li> Ruby 2.7.2+</li>
+</ul>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-Inicio de projeto
+<h2>Instalação</h2>
+<ol>
+  <li>Clonando a aplicação:
+    git clone https://github.com/s1du5/appTesteNama</li>
+  <li>Rodar: bundle install</li>
+  <li>Rodar: rake db:migrate</li>
+  <li>Executar a aplicação com: rails s ou rails server</li>
+</ol>
