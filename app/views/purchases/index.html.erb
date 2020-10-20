@@ -1,20 +1,38 @@
+<br>
 <h1>Compras</h1>
-
-<table>
+<div class="card">
+    <h5 class="card-header">Importar arquivo</h5>
+    <div class="card-body">
+        <form action="/uploads/import" enctype="multipart/form-data" method="post">
+            <fieldset>
+                <input class="form-control-file" type="file" name="txt" >
+                <input type="submit" name="import">
+            </fieldset>
+        </form>
+    </div>
+</div>
+<br>
+<table class="table table-striped">
     <thead>
-        <th>Comprador</th>
-        <th>Descrição</th>
-        <th>Preço Unitário</th>
-        <th>Quantidade</th>
-        <th>Endereço</th>
-        <th>Fornecedor</th>
+        <tr>
+            <th>Comprador</th>
+            <th>Descrição</th>
+            <th>Preço Unitário</th>
+            <th>Quantidade</th>
+            <th>Endereço</th>
+            <th>Fornecedor</th>
+        </tr>
     </thead>
     <tbody>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <% @purchases.each do |purchase| %>
+            <tr>
+                <td><%= purchase.buyer.name %></td>
+                <td><%= purchase.product.description %></td>
+                <td><%= purchase.product.price %></td>
+                <td><%= purchase.quantity %></td>
+                <td><%= purchase.provider.address %></td>
+                <td><%= purchase.provider.name %></td>
+            </tr>
+        <% end %>
     </tbody>
 </table>

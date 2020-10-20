@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Teste Nama</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
+  <%= link_to "Teste Nama", purchases_index_path, class: 'navbar-brand' %>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
@@ -16,10 +16,6 @@
 
       <li class="nav-item">
         <%= link_to "Fornecedores", providers_path, class: 'nav-link' %>
-      </li>
-
-      <li class="nav-item">
-        <%= link_to "Importar arquivo", uploads_index_path, class: 'nav-link' %>
       </li>
     </ul>
   </div>
